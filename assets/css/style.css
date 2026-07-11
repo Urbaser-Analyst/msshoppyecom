@@ -673,22 +673,29 @@ button {
 
 .site-footer a { color: var(--ink-soft); }
 /* Brand Colors */
-/* WhatsApp */
+.social-icons a{
+    transition:all 0.3s ease;
+}
+
 .social-icons .whatsapp:hover{
-    background-color:#25D366;
+    background:#25D366;
     color:#fff;
+    transform:translateY(-5px) scale(1.15);
+    box-shadow:0 8px 20px rgba(37,211,102,.45);
 }
 
-/* Instagram */
 .social-icons .instagram:hover{
-    background-color:#E4405F;
+    background:#E4405F;
     color:#fff;
+    transform:translateY(-5px) scale(1.15);
+    box-shadow:0 8px 20px rgba(228,64,95,.45);
 }
 
-/* YouTube */
 .social-icons .youtube:hover{
-    background-color:#FF0000;
+    background:#FF0000;
     color:#fff;
+    transform:translateY(-5px) scale(1.15);
+    box-shadow:0 8px 20px rgba(255,0,0,.45);
 }
 
 /* ---------- Toast ---------- */
