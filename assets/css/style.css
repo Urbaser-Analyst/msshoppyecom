@@ -133,7 +133,7 @@ button {
   transition: background 0.15s ease;
 }
 
-.cart-button:hover { background: var(--indigo-deep); }
+.cart-button:hover { background: var(--#2A55E5); }
 
 .cart-count {
   background: #ffff00;
