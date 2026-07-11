@@ -672,6 +672,26 @@ button {
 }
 
 .site-footer a { color: var(--ink-soft); }
+/* Brand Colors */
+.social-icons a:nth-child(1):hover{
+    background:#1877F2;
+    color:#fff;
+}
+
+.social-icons a:nth-child(1):hover{
+    background:#25D366;
+    color:#fff;
+}
+
+.social-icons a:nth-child(2):hover{
+    background:#E4405F;
+    color:#fff;
+}
+
+.social-icons a:nth-child(3):hover{
+    background:#FF0000;
+    color:#fff;
+}
 
 /* ---------- Toast ---------- */
 .toast {
