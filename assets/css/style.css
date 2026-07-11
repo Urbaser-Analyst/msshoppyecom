@@ -124,7 +124,7 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--indigo);
+  background: #2A55E5;
   color: #fff;
   padding: 10px 18px;
   border-radius: 999px;
@@ -136,7 +136,7 @@ button {
 .cart-button:hover { background: var(--indigo-deep); }
 
 .cart-count {
-  background: var(--marigold);
+  background: #ffff00;
   color: var(--indigo-deep);
   font-family: var(--font-mono);
   font-size: 12px;
