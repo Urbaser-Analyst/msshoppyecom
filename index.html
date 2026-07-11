@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Shoppy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <span class="brand-mark" id="siteNameEl">MS Shoppy</span>
+      <span class="brand-tag" id="siteTagEl">Everyday goods, delivered.</span>
+    </div>
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products…">
+      </div>
+      <button class="cart-button" id="openCartBtn">
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Cash on delivery, everywhere we ship</span>
+    <h1>Order today, pay at your doorstep.</h1>
+    <p id="taglineEl">No card, no advance, no fuss — just tell us where to bring it.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="category-row" id="categoryRow">
+    <button class="chip active" data-category="all">All</button>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <div class="loading-state">Loading products…</div>
+  </div>
+</main>
+
+<footer class="site-footer container">
+  <span>&copy; <span id="yearEl"></span> <span id="footerNameEl">MS Shoppy</span></span>
+  <span id="supportEl"></span>
+</footer>
+
+<!-- Cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h2>Your cart</h2>
+    <button class="drawer-close" id="closeCartBtn">&times;</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-footer" id="cartFooter" style="display:none;">
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <strong id="cartSubtotal">₹0</strong>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to checkout</button>
+  </div>
+</aside>
+
+<!-- Checkout modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-card">
+    <h2>Delivery details</h2>
+    <p class="modal-sub">We'll use this to deliver your order and collect payment.</p>
+    <div class="cod-note">💵 Pay in cash when your order arrives. No online payment needed.</div>
+    <div class="form-error" id="checkoutError"></div>
+    <form id="checkoutForm">
+      <div class="field">
+        <label for="custName">Full name</label>
+        <input type="text" id="custName" required>
+        <div class="field-error">Please enter your name</div>
+      </div>
+      <div class="field">
+        <label for="custMobile">Mobile number</label>
+        <input type="tel" id="custMobile" maxlength="10" placeholder="10-digit mobile number" required>
+        <div class="field-error">Enter a valid 10-digit mobile number</div>
+      </div>
+      <div class="field">
+        <label for="custAddress">Address</label>
+        <textarea id="custAddress" rows="2" placeholder="House no., street, area" required></textarea>
+        <div class="field-error">Please enter your delivery address</div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="custCity">City</label>
+          <input type="text" id="custCity" required>
+          <div class="field-error">Required</div>
+        </div>
+        <div class="field">
+          <label for="custPincode">Pincode</label>
+          <input type="text" id="custPincode" maxlength="6" required>
+          <div class="field-error">Enter a valid 6-digit pincode</div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="custLandmark">Landmark (optional)</label>
+        <input type="text" id="custLandmark">
+      </div>
+      <div class="field">
+        <label for="custNotes">Order notes (optional)</label>
+        <input type="text" id="custNotes" placeholder="e.g. call before delivery">
+      </div>
+      <button type="submit" class="checkout-btn" id="placeOrderBtn">Place order — Pay on delivery</button>
+    </form>
+  </div>
+</div>
+
+<!-- Confirmation modal -->
+<div class="modal" id="confirmModal">
+  <div class="modal-card">
+    <div class="receipt" id="receiptContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/store.js"></script>
+</body>
+</html>
